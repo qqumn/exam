@@ -191,7 +191,7 @@ function gh_exam_scripts() {
 
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
-	wp_enqueue_style('rex_style', get_template_directory_uri() . '/stylesheets/screen.css');
+	wp_enqueue_style('rex_style', get_template_directory_uri() . '/stylesheets/style.css');
 
 
 	/*-----------------------*/
@@ -338,46 +338,107 @@ function my_social_media_icons()
 /*Copyright*/
 add_action('customize_register', function ($customizer) {
 	$customizer->add_section(
-		'edits-copyright',
-		array(
-			'title' => 'Copyright',
-			'description' => 'Edit',
-			'priority' => 35,
-		)
+			'edits-copyright',
+			array(
+					'title' => 'Copyright',
+					'description' => 'Edit',
+					'priority' => 35,
+			)
 	);
 	$customizer->add_setting(
-		'copyright_name',
-		array('default' => 'geekhub-exam.esy.es')
+			'copyright_name',
+			array('default' => 'geekhub-exam.esy.es')
 	);
 	$customizer->add_control(
-		'copyright_name',
-		array(
-			'label' => 'GeekHub exam',
-			'section' => 'edits-copyright',
-			'type' => 'text',
-		)
+			'copyright_name',
+			array(
+					'label' => 'GeekHub exam',
+					'section' => 'edits-copyright',
+					'type' => 'text',
+			)
 	);
 	$customizer->add_setting(
-		'copyright_year',
-		array('default' => '2016')
+			'copyright_year',
+			array('default' => '2016')
 	);
 	$customizer->add_control(
-		'copyright_year',
-		array(
-			'label' => 'Year',
-			'section' => 'edits-copyright',
-			'type' => 'text',
-		)
+			'copyright_year',
+			array(
+					'label' => 'Year',
+					'section' => 'edits-copyright',
+					'type' => 'text',
+			)
 	);
 	$customizer->add_control(
-		'hide_copyright',
-		array(
-			'type' => 'checkbox',
-			'label' => 'Hide text copyright',
-			'section' => 'edit-copyright',
-		)
+			'hide_copyright',
+			array(
+					'type' => 'checkbox',
+					'label' => 'Hide text copyright',
+					'section' => 'edit-copyright',
+			)
 	);
 });
+
+//About us text field
+
+add_action('customize_register', function ($customizer) {
+	$customizer->add_section(
+			'edits-about-us',
+			array(
+					'title' => 'About us text',
+					'description' => 'Edit',
+					'priority' => 35,
+			)
+	);
+	$customizer->add_setting(
+			'about-us-text',
+			array('default' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')
+	);
+	$customizer->add_control(
+			'about-us',
+			array(
+					'section' => 'edits-about-us',
+					'type' => 'text',
+					'settings' => 'about-us-text',
+			)
+	);
+});
+
+// customize phone number to header
+
+
+add_action('customize_register', function ($customizer) {
+	$customizer->add_section(
+			'phone-number',
+			array(
+					'title' => __('Dinamic phone number', 'ghexam'),
+					'description' => 'Edit phone',
+					'priority' => 35
+			)
+	);
+	$customizer->add_setting('contact-number', array (
+			'default' => '+380938207742',
+			'transport' => 'refresh'
+	));
+	$customizer->add_control(new WP_Customize_Control($customizer, 'phone', array(
+			'label' => __('Phone number', 'ghexam'),
+			'section' => 'phone-number',
+			'settings' => 'contact-number',
+			'priority' => 1
+	)));
+});
+
+//$wp_customize->add_setting('contact-number', array(
+//		'default' => '380055300',
+//		'transport' => 'refresh'
+//));
+//$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'phone', array(
+//		'label' => __('Enter admin contact number', 'ghexam'),
+//		'section' => 'ghexam_about',
+//		'settings' => 'contact-number',
+//		'priority' => 1
+//)));
+
 /*__________________________________________________________*/
 /*create logo in theme customize*/
 /*_____________________________________*/
@@ -407,7 +468,7 @@ add_action('customize_register', 'geekhub_theme_customizer');
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

@@ -1,0 +1,51 @@
+header {
+  position: absolute;
+  top: 0;
+}
+
+#hero {
+  position: relative;
+  .welcome-block {
+    position: absolute;
+    max-width: 500px;
+    top: 10vw;
+    left: 10%;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: 52px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      line-height: 60px;
+      text-transform: uppercase;
+    }
+    p {
+      margin-top: 10px;
+      font-family: Lora, sans-serif;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 23px;
+      opacity: .8;
+    }
+  }
+}
+
+.read-more-hero {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #1c1c1c;
+  background-color: #ffaf36;
+  text-transform: uppercase;
+  text-decoration: none;
+}

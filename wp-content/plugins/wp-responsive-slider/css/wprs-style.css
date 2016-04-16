@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* Plugin Style CSS  */
+
+#wprs_slider {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+.wprsColor{
+	display: none !important;
+}
+.authot_link{
+	font-size:10px;
+}
+.bxslider.clearfix, .bxslider.clearfix li {
+  margin: 0 !important;
+  padding:0;
+}
+.bxslider.clearfix img {
+  margin: 0;
+  border:0 none;
+  width:100%;
+}
+.bx-wrapper .bx-next {
+  background: rgba(0, 0, 0, 0) url("../img/controls.png") no-repeat scroll -43px -32px !important;
+}
+.bx-wrapper .bx-prev {
+  background: rgba(0, 0, 0, 0) url("../img/controls.png") no-repeat scroll 0 -32px !important;
+}
+.bx-prev, .bx-next{
+	border:0 none !important;
+}
+.bx-wrapper .bx-viewport {
+	left:0;
+}

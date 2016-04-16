@@ -22,9 +22,9 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'gh_exam' ); ?></a>
+<!--	<a class="skip-link screen-reader-text" href="#main">--><?php //esc_html_e( 'Skip to content', 'gh_exam' ); ?><!--</a>-->
 
-	<header id="masthead" class="site-header" role="banner">
+	<header class="site-header" role="banner">
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -45,6 +45,7 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gh_exam' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+		<div class="phone-number"> <?php echo get_theme_mod('contact-number', ''); ?> </div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

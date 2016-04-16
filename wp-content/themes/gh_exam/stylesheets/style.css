@@ -1,7 +1,6 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lora);
 /* line 5, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,4 +64,397 @@ a img {
 /* line 116, ../../../../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+/* line 1, ../sass/_main-content.scss */
+section.about-us {
+  background: white;
+  overflow: hidden;
+}
+/* line 4, ../sass/_main-content.scss */
+section.about-us .page-info {
+  float: right;
+  padding-bottom: 50px;
+}
+/* line 8, ../sass/_main-content.scss */
+section.about-us p {
+  max-width: 600px;
+  color: #585858;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+@media (max-width: 800px) {
+  /* line 1, ../sass/_main-content.scss */
+  section.about-us {
+    overflow: auto;
+    text-align: center;
+  }
+  /* line 22, ../sass/_main-content.scss */
+  section.about-us .page-info {
+    margin: 30px auto 0;
+    padding: 0;
+    float: none;
+  }
+  /* line 27, ../sass/_main-content.scss */
+  section.about-us p {
+    margin: 0 auto;
+  }
+}
+
+/* line 34, ../sass/_main-content.scss */
+section.services {
+  position: relative;
+  background-color: #eaeff3;
+}
+/* line 37, ../sass/_main-content.scss */
+section.services:after {
+  content: url("../images/triangles.png");
+  position: absolute;
+  bottom: -7px;
+  right: 20%;
+}
+/* line 43, ../sass/_main-content.scss */
+section.services .services-list {
+  text-align: center;
+  margin: 30px 0 0;
+}
+/* line 46, ../sass/_main-content.scss */
+section.services .services-list li {
+  display: inline-block;
+  max-width: 490px;
+  width: 100%;
+  margin: 10px;
+  text-align: left;
+}
+/* line 53, ../sass/_main-content.scss */
+section.services .services-list li:hover .service-title:before {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #36a8ff;
+  position: absolute;
+}
+/* line 62, ../sass/_main-content.scss */
+section.services .services-list .service-icon {
+  margin: 20px;
+  float: left;
+  height: 100px;
+}
+/* line 67, ../sass/_main-content.scss */
+section.services .services-list .service-block {
+  overflow: hidden;
+}
+/* line 70, ../sass/_main-content.scss */
+section.services .services-list .service-title {
+  position: relative;
+  margin-top: 10px;
+  color: #1c1c1c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+/* line 80, ../sass/_main-content.scss */
+section.services .services-list .service-text {
+  margin-top: 10px;
+  color: #585858;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* line 92, ../sass/_main-content.scss */
+.clients .clients-list {
+  margin: 40px 0 0;
+  text-align: center;
+}
+/* line 95, ../sass/_main-content.scss */
+.clients .clients-list li {
+  position: relative;
+  display: inline-block;
+  max-width: 330px;
+  margin: 10px;
+  width: 100%;
+  text-align: left;
+  vertical-align: top;
+}
+/* line 103, ../sass/_main-content.scss */
+.clients .clients-list li:after {
+  content: url("../images/quote_icon.png");
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+/* line 110, ../sass/_main-content.scss */
+.clients .clients-list .client-text {
+  color: #585858;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+/* line 117, ../sass/_main-content.scss */
+.clients .clients-list .client-image {
+  margin-right: 20px;
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+/* line 122, ../sass/_main-content.scss */
+.clients .clients-list .client-image img {
+  width: 100%;
+  height: auto;
+}
+/* line 127, ../sass/_main-content.scss */
+.clients .clients-list .client-info {
+  overflow: hidden;
+}
+/* line 130, ../sass/_main-content.scss */
+.clients .clients-list .client-name {
+  color: #1c1c1c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+/* line 138, ../sass/_main-content.scss */
+.clients .clients-list .client-desc {
+  color: #585858;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* line 148, ../sass/_main-content.scss */
+.news {
+  background-color: #eaeff3;
+}
+/* line 150, ../sass/_main-content.scss */
+.news .news-list {
+  margin: 0;
+}
+/* line 152, ../sass/_main-content.scss */
+.news .news-list li {
+  margin: 20px;
+  display: inline-block;
+  list-style: none;
+}
+/* line 156, ../sass/_main-content.scss */
+.news .news-list li:not(:first-child) {
+  display: block;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  color: #585858;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+/* line 166, ../sass/_main-content.scss */
+.news .news-list li:not(:first-child) .posted-date {
+  color: #ffaf36;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+/* line 177, ../sass/_main-content.scss */
+.news .main-news {
+  float: left;
+  max-width: 450px;
+  width: 100%;
+}
+/* line 182, ../sass/_main-content.scss */
+.news .news-info {
+  margin-right: 20px;
+  float: left;
+  text-align: right;
+}
+/* line 186, ../sass/_main-content.scss */
+.news .news-info a {
+  margin: 0 10px 10px 0;
+  position: relative;
+  display: block;
+  color: #565656;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+/* line 194, ../sass/_main-content.scss */
+.news .news-info a span {
+  display: block;
+  color: #1c1c1c;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 201, ../sass/_main-content.scss */
+.news .news-info a .fa {
+  display: block;
+  font-size: 25px;
+  color: #1c1c1c;
+}
+/* line 206, ../sass/_main-content.scss */
+.news .news-info a:not(:last-child):after {
+  content: url("../images/after_news_info.png");
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+/* line 214, ../sass/_main-content.scss */
+.news .post-info {
+  overflow: hidden;
+}
+/* line 217, ../sass/_main-content.scss */
+.news .post-content {
+  color: #585858;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+/* line 224, ../sass/_main-content.scss */
+.news .post-title a {
+  margin: 5px 0;
+  color: #1c1c1c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/* line 236, ../sass/_main-content.scss */
+.partners {
+  position: relative;
+}
+/* line 238, ../sass/_main-content.scss */
+.partners .partners-list {
+  margin: 20px 0 0;
+}
+/* line 240, ../sass/_main-content.scss */
+.partners .partners-list li {
+  display: inline-block;
+  padding: 10px 40px;
+  border: 1px solid #ccc;
+}
+
+/* line 1, ../sass/_header.scss */
+header {
+  position: absolute;
+  top: 0;
+}
+
+/* line 6, ../sass/_header.scss */
+#hero {
+  position: relative;
+}
+/* line 8, ../sass/_header.scss */
+#hero .welcome-block {
+  position: absolute;
+  max-width: 500px;
+  top: 10vw;
+  left: 10%;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+/* line 15, ../sass/_header.scss */
+#hero .welcome-block span {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+/* line 20, ../sass/_header.scss */
+#hero .welcome-block h1 {
+  margin: 0;
+  font-size: 52px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+/* line 28, ../sass/_header.scss */
+#hero .welcome-block p {
+  margin-top: 10px;
+  font-family: Lora, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 23px;
+  opacity: .8;
+}
+
+/* line 39, ../sass/_header.scss */
+.read-more-hero {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #1c1c1c;
+  background-color: #ffaf36;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 14, ../sass/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 18, ../sass/style.scss */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+/* line 22, ../sass/style.scss */
+.container .read-more, .container .view-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffaf36;
+  border: 2px solid #ffaf36;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all, .3s, ease;
+}
+/* line 36, ../sass/style.scss */
+.container .read-more:hover, .container .view-more:hover {
+  color: white;
+  background-color: #ffaf36;
+}
+
+/* line 43, ../sass/style.scss */
+.section-title {
+  color: #1c1c1c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+/* line 52, ../sass/style.scss */
+.section-description {
+  color: #1c1c1c;
+  font-family: 'Lora', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 27px;
+  opacity: .8;
 }

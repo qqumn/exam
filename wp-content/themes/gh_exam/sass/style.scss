@@ -1,6 +1,59 @@
 // Screen
 // ======
-
 @import "grids";
+@import "compass/reset";
 
-@import "screen";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+
+@import "_main-content";
+@import "_header";
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  .read-more, .view-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #ffaf36;
+    border: 2px solid #ffaf36;
+    border-radius: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all, .3s, ease;
+    &:hover {
+      color: white;
+      background-color: #ffaf36;
+    }
+  }
+}
+
+.section-title {
+  color: #1c1c1c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.section-description {
+  color: #1c1c1c;
+  font-family: 'Lora', sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 27px;
+  opacity: .8;
+}
